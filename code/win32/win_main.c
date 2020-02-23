@@ -544,7 +544,7 @@ void * QDECL Sys_LoadDll( const char *name, char *fqpath , int (QDECL **entryPoi
 	*fqpath = 0 ;		// added 7/20/02 by T.Ray
 
 	Com_sprintf( filename, sizeof( filename ), "%sx86.dll", name );
-
+/*
 #ifdef NDEBUG
 	timestamp = Sys_Milliseconds();
 	if( ((timestamp - lastWarning) > (5 * 60000)) && !Cvar_VariableIntegerValue( "dedicated" )
@@ -564,7 +564,7 @@ void * QDECL Sys_LoadDll( const char *name, char *fqpath , int (QDECL **entryPoi
 		}
 	}
 #endif
-
+*/
 #ifndef NDEBUG
 	libHandle = LoadLibrary( filename );
   if (libHandle)
